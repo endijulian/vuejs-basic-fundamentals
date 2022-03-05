@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Js Events Object</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <style>
+        .canvas{
+            width: 240px;
+            height: 240px;
+            margin-top: 20px;
+            background-color: orange;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div id="endi">
+        <button @click="Me">Click Here</button>
+        
+        <div class="canvas" @mousemove="over">
+            {{ log.x }}, {{ log.y }}
+        </div>
+    </div>
+
+
+    <script>
+        let app = new Vue({
+            el: '#endi',
+            data:{
+                log:{
+                    x:0,
+                    y:0
+                }
+            },
+            methods:{
+                Me(event){
+                    console.log(event);
+                },
+                over(e){
+                    this.log.x = event.offsetX
+                    this.log.y = event.offsetY
+                }
+            }
+        })
+    </script>
+</body>
+</html>

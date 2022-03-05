@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Js Events</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+</head>
+<body>
+
+    <div id="endi">
+        <H1>I earn {{ dollar }} $ Per Month</H1>
+        <button @click="Amount(10)"> +10 </button>
+        <button @click="Amount(-10)"> -10 </button>
+        <br><br>
+
+        <H1>I earn {{ dollarDblClick }} $ Per Month</H1>
+        <button @dblclick="AmountDblClick(10)"> +10 Double click </button>
+        <button @dblclick="AmountDblClick(-10)"> -10 Double Click</button>
+    </div>
+
+
+    <script>
+        let app = new Vue({
+            el: '#endi',
+            data:{
+                dollar: 100,
+                dollarDblClick: 100,
+            },
+            methods:{
+                Amount(pound){
+                    this.dollar += pound
+                },
+                AmountDblClick(pound){
+                    this.dollarDblClick += pound
+                }
+            }
+        })
+    </script>
+</body>
+</html>

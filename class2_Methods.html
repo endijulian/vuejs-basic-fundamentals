@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Js Methods</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+</head>
+<body>
+
+    <div id="endi">
+        <h1>{{ MyName() }}</h1>
+        <h1>{{ Myage(23) }}</h1>
+    </div>
+
+
+    <script>
+        let app = new Vue({
+            el: '#endi',
+            data:{
+                message: 'Endi Julian'
+            },
+            methods:{
+                MyName(){
+                    return 'Easy learning vue'
+                },
+                Myage(age){
+                    return `${this.message} My age is ${age}`
+                }
+            }
+        })
+    </script>
+</body>
+</html>
