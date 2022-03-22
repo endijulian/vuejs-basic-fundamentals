@@ -23,7 +23,6 @@ export default {
 <style scoped>
 nav {
   text-align: center;
-  background-color: coral;
 }
 
 nav ul {

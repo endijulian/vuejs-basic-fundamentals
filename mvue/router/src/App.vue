@@ -1,33 +1,25 @@
 <template>
   <div id="app">
-    <h1>{{ title }}</h1>
+    <img src="./assets/logo.png" />
     <Navbar></Navbar>
-    <Hook></Hook>
+    <router-view />
   </div>
 </template>
 
 <script>
-import Navbar from "./components/Navbar.vue";
-import Hook from "./components/Hook.vue";
+import Navbar from "@/components/Navbar.vue";
 
 export default {
   name: "App",
-  data() {
-    return {
-      title: "How Are You Endi Julian",
-    };
-  },
   components: {
     Navbar,
-    Hook,
   },
-  methods: {},
 };
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
